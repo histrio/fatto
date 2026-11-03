@@ -110,7 +110,8 @@ class SettingsBackupTest {
 
     @Test
     fun `sync certificate opt-in round trips and older backups stay strict`() {
-        val source = FakeSettingsRepository().apply {
+        val source =
+            FakeSettingsRepository().apply {
             saveCredentials(
                 "https://sync.example.com",
                 "client",

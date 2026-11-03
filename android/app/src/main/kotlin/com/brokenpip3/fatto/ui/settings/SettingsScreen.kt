@@ -685,8 +685,9 @@ fun SettingsScreen(
                     },
                     text = {
                         Text(
-                            "This disables certificate-chain and hostname verification for this sync server. " +
-                                "An attacker on the network could impersonate it and read or alter traffic. Use only for a trusted private server.",
+                            "This disables certificate-chain and hostname verification for this " +
+                                "sync server. An attacker on the network could impersonate it and " +
+                                "read or alter traffic. Use only for a trusted private server.",
                         )
                     },
                     confirmButton = {

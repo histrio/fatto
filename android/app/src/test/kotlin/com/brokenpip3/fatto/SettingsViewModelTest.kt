@@ -34,7 +34,8 @@ import java.util.Calendar
 class SettingsViewModelTest {
     @Test
     fun `invalid certificate preference defaults off and can be enabled`() {
-        val repository = FakeSettingsRepository().apply {
+        val repository =
+            FakeSettingsRepository().apply {
             saveCredentials(
                 "https://sync.example.com",
                 "client",
