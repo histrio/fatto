@@ -677,7 +677,12 @@ fun SettingsScreen(
                     shape = MaterialTheme.shapes.extraLarge,
                     containerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
                     onDismissRequest = { showInsecureTlsWarning = false },
-                    title = { Text("Accept invalid TLS certificates?", style = MaterialTheme.typography.headlineSmall) },
+                    title = {
+                        Text(
+                            "Accept invalid TLS certificates?",
+                            style = MaterialTheme.typography.headlineSmall,
+                        )
+                    },
                     text = {
                         Text(
                             "This disables certificate-chain and hostname verification for this sync server. " +

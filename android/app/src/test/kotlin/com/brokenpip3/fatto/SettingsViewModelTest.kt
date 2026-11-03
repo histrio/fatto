@@ -35,7 +35,11 @@ class SettingsViewModelTest {
     @Test
     fun `invalid certificate preference defaults off and can be enabled`() {
         val repository = FakeSettingsRepository().apply {
-            saveCredentials("https://sync.example.com", "client", "secret")
+            saveCredentials(
+                "https://sync.example.com",
+                "client",
+                "secret",
+            )
         }
         val viewModel = SettingsViewModel(repository)
 

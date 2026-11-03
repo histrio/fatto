@@ -111,7 +111,12 @@ class SettingsBackupTest {
     @Test
     fun `sync certificate opt-in round trips and older backups stay strict`() {
         val source = FakeSettingsRepository().apply {
-            saveCredentials("https://sync.example.com", "client", "secret", acceptInvalidCertificates = true)
+            saveCredentials(
+                "https://sync.example.com",
+                "client",
+                "secret",
+                acceptInvalidCertificates = true,
+            )
         }
         val json = JSONObject(backupService(source).exportJson().getOrThrow())
         assertTrue(json.getJSONObject("settings").getJSONObject("serverCredentials").getBoolean("acceptInvalidCertificates"))
