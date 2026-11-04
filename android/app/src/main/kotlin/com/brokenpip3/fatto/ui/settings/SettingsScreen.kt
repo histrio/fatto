@@ -460,8 +460,11 @@ fun SettingsScreen(
                                     onSecretVisibleChange = { secretVisible = it },
                                     onSyncUrlChange = viewModel::onUrlChange,
                                     onAcceptInvalidCertificatesChange = { enabled ->
-                                        if (enabled) showInsecureTlsWarning = true
-                                        else viewModel.onAcceptInvalidCertificatesChange(false)
+                                        if (enabled) {
+                                            showInsecureTlsWarning = true
+                                        } else {
+                                            viewModel.onAcceptInvalidCertificatesChange(false)
+                                        }
                                     },
                                     onClientIdChange = viewModel::onClientIdChange,
                                     onSecretChange = viewModel::onSecretChange,
