@@ -7,6 +7,7 @@ import androidx.work.Configuration
 class FattoApplication : Application(), Configuration.Provider {
     override fun onCreate() {
         super.onCreate()
+        System.loadLibrary("taskchampion_android")
         com.brokenpip3.fatto.data.calendar.CalendarExportScheduler.bootstrap(this)
     }
 
