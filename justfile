@@ -33,8 +33,8 @@ build-bindings: (build-rust "x86_64")
 build-debug-only:
     cd android && ./gradlew assembleDebug
 
-# local debug build
-build-debug: build-bindings
+# local debug build for both supported device architectures
+build-debug: build-rust-all build-bindings
     cd android && ./gradlew assembleDebug
 
 # build release apk (assumes rust libs and bindings are already built)
